@@ -9,11 +9,6 @@
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Paper](https://img.shields.io/badge/Paper-LayoutGAN++-orange.svg)](https://arxiv.org/abs/1908.07785)
 
-![GitHub stars](https://img.shields.io/github/stars/koesan/const-layout-generator?style=social)
-![GitHub forks](https://img.shields.io/github/forks/koesan/const-layout-generator?style=social)
-[![Hugging Face](https://img.shields.io/badge/🤗-Space-yellow.svg)](https://huggingface.co/spaces/koesan/manga-layout-generator)
-
-
 <img src="image/training.gif" alt="Training Process" width="600"/>
 <p><i>Model training process / Model eğitim süreci</i></p>
 
