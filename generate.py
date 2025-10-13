@@ -5,7 +5,7 @@ from pathlib import Path
 import torch
 import numpy as np
 
-from util import set_seed, convert_layout_to_image
+from util import set_seed, convert_layout_to_image, fix_overlaps
 from model.layoutganpp import Generator
 from data import get_dataset  # Ekledik
 
@@ -64,6 +64,12 @@ def main():
             bbox = netG(z, label, padding_mask)
             b = bbox[0].cpu().numpy()
             l = label[0].cpu().numpy()
+            
+            # Fix overlaps (only during inference, not training)
+            b_fixed, overlap_fixed = fix_overlaps(b, max_attempts=200)
+            if not overlap_fixed:
+                print(f"Warning: Layout {i} may have minor overlaps")
+            b = np.array(b_fixed)
 
             convert_layout_to_image(
                 b, l, dataset.colors, (120, 80)
