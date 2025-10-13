@@ -21,6 +21,11 @@
 | Automatically generated layout for 3 panels | Automatically generated layout for 8 panels |
 | 3 panel için otomatik oluşturulan düzen | 8 panel için otomatik oluşturulan düzen |
 
+
+## 📎 Live Demo - Canlı Demo
+
+[![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-Demo-yellow?style=for-the-badge&logo=huggingface&logoColor=white)](https://huggingface.co/spaces/koesan/Manga-Panel-LayoutGAN)
+
 ---
 
 ## 🌐 Language / Dil
