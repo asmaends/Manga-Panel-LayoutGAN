@@ -243,12 +243,6 @@ docker cp const_layout_container:/app/output ./output
 
 ---
 
-## 📊 About the Dataset
-
-This project uses a specially prepared dataset for manga panel layouts. The dataset is derived from the **MangaZero** dataset and contains panel positions from manga pages.
-
----
-
 ## 🙏 Acknowledgments
 
 This project uses the following resources:
@@ -482,12 +476,6 @@ docker start -i const_layout_container
 # Çıktıları kopyala
 docker cp const_layout_container:/app/output ./output
 ```
-
----
-
-## 📊 Dataset Hakkında
-
-Bu proje, manga panel düzenleri için özel olarak hazırlanmış bir dataset kullanmaktadır. Dataset, **MangaZero** veri setinden türetilmiştir ve manga sayfalarındaki panel pozisyonlarını içermektedir.
 
 ---
 
