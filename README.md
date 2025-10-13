@@ -244,13 +244,6 @@ docker cp const_layout_container:/app/output ./output
 
 This project uses a specially prepared dataset for manga panel layouts. The dataset is derived from the **MangaZero** dataset and contains panel positions from manga pages.
 
-**Dataset Features:**
-
-- Panel layouts extracted from manga pages
-- Various panel counts (2-12 panels)
-- Normalized coordinate information
-- Split into training, validation, and test sets
-
 ---
 
 ## 🙏 Acknowledgments
@@ -260,16 +253,16 @@ This project uses the following resources:
 ### Dataset
 
 - **MangaZero Dataset**: [Hugging Face](https://huggingface.co/datasets/jianzongwu/MangaZero)
-  - Thanks to [jianzongwu](https://github.com/jianzongwu) and team for providing the manga panel data
+  - Thanks for providing the manga panel data
 
 ### Reference Project
 
-- **DiffSensei**: [GitHub Repository](https://github.com/jianzongwu/DiffSensei)
-  - For manga generation and panel layout research
+- **LayoutGAN++**: [GitHub Repository](https://github.com/ktrk115/const_layout)
+  - For panel layout research
 
 ### Model Architecture
 
-- **LayoutGAN++**: [Paper](https://arxiv.org/abs/1908.07785)
+- **LayoutGAN++**: [Paper](https://arxiv.org/abs/1901.06767)
   - Transformer-based GAN architecture for layout generation
 
 ---
@@ -344,7 +337,7 @@ Manga panel dataset ile eğitim:
 
 ```bash
 python train.py \
-  --dataset manga \
+  --dataset publaynet \
   --batch_size 64 \
   --iteration 200000 \
   --latent_size 4 \
@@ -487,13 +480,6 @@ docker cp const_layout_container:/app/output ./output
 
 Bu proje, manga panel düzenleri için özel olarak hazırlanmış bir dataset kullanmaktadır. Dataset, **MangaZero** veri setinden türetilmiştir ve manga sayfalarındaki panel pozisyonlarını içermektedir.
 
-**Dataset Özellikleri:**
-
-- Manga sayfalarından çıkarılmış panel düzenleri
-- Farklı panel sayıları (2-12 panel arası)
-- Normalize edilmiş koordinat bilgileri
-- Eğitim, validasyon ve test setlerine bölünmüş
-
 ---
 
 ## 🙏 Teşekkürler
@@ -503,14 +489,14 @@ Bu proje aşağıdaki kaynakları kullanmaktadır:
 ### Dataset
 
 - **MangaZero Dataset**: [Hugging Face](https://huggingface.co/datasets/jianzongwu/MangaZero)
-  - Manga panel verilerini sağladıkları için [jianzongwu](https://github.com/jianzongwu) ve ekibine teşekkürler
+  - Manga panel verilerini sağladıkları için teşekkürler
 
 ### Referans Proje
 
-- **DiffSensei**: [GitHub Repository](https://github.com/jianzongwu/DiffSensei)
-  - Manga üretimi ve panel düzenleme araştırmaları için
+- **LayoutGAN++**: [GitHub Repository](https://github.com/ktrk115/const_layout)
+  - Panel düzenleme araştırmaları için
 
 ### Model Mimarisi
 
-- **LayoutGAN++**: [Paper](https://arxiv.org/abs/1908.07785)
+- **LayoutGAN++**: [Paper](https://arxiv.org/abs/1901.06767)
   - Layout generation için transformer tabanlı GAN mimarisi
