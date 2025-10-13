@@ -1,3 +1,5 @@
+<div align="center">
+
 # Manga Panel Layout Generator with LayoutGAN++
 
 [![Python](https://img.shields.io/badge/Python-3.8-blue.svg)](https://www.python.org/)
@@ -26,6 +28,8 @@ This project aims to create automatic panel layouts for manga pages using the La
 ## 🌐 Language / Dil
 
 **[English](#english)** | **[Türkçe](#türkçe)**
+
+</div>
 
 ---
 
