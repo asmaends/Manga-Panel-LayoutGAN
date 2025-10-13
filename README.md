@@ -1,27 +1,30 @@
 <div align="center">
-
+  
 # Manga Panel Layout Generator with LayoutGAN++
 
 [![Python](https://img.shields.io/badge/Python-3.8-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-1.8.1-red.svg)](https://pytorch.org/)
 [![CUDA](https://img.shields.io/badge/CUDA-11.1-green.svg)](https://developer.nvidia.com/cuda-toolkit)
 [![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg)](https://www.docker.com/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Paper](https://img.shields.io/badge/Paper-LayoutGAN++-orange.svg)](https://arxiv.org/abs/1908.07785)
 
-**AI-powered automatic manga panel position prediction and layout generation project.**
+![GitHub stars](https://img.shields.io/github/stars/koesan/const-layout-generator?style=social)
+![GitHub forks](https://img.shields.io/github/forks/koesan/const-layout-generator?style=social)
+[![Hugging Face](https://img.shields.io/badge/🤗-Space-yellow.svg)](https://huggingface.co/spaces/koesan/manga-layout-generator)
 
-This project aims to create automatic panel layouts for manga pages using the LayoutGAN++ architecture. It predicts optimal placement for manga pages with different panel counts using deep learning and GAN technology.
 
-<div align="center">
-  <img src="image/training.gif" alt="Training Process" width="600"/>
-  <p><i>Model training process</i></p>
-</div>
+<img src="image/training.gif" alt="Training Process" width="600"/>
+<p><i>Model training process / Model eğitim süreci</i></p>
 
-## 🎨 Sample Outputs
 
-| 3-Panel Page                                                    | 8-Panel Page                                                    |
-|:---------------------------------------------------------------:|:---------------------------------------------------------------:|
+## 🎨 Sample Outputs / Örnek Çıktılar
+
+| 3-Panel Page / 3 Panelli Sayfa | 8-Panel Page / 8 Panelli Sayfa |
+|:---------------:|:---------------:|
 | <img src="image/3_panel.png" alt="3 Panel Layout" width="300"/> | <img src="image/8_panel.png" alt="8 Panel Layout" width="300"/> |
-| Automatically generated layout for 3 panels                     | Automatically generated layout for 8 panels                     |
+| Automatically generated layout for 3 panels | Automatically generated layout for 8 panels |
+| 3 panel için otomatik oluşturulan düzen | 8 panel için otomatik oluşturulan düzen |
 
 ---
 
@@ -34,8 +37,13 @@ This project aims to create automatic panel layouts for manga pages using the La
 ---
 
 <a name="english"></a>
-
 # 📖 English Documentation
+
+## 📖 About
+
+**AI-powered automatic manga panel position prediction and layout generation project.**
+
+This project aims to create automatic panel layouts for manga pages using the LayoutGAN++ architecture. It predicts optimal placement for manga pages with different panel counts using deep learning and GAN technology.
 
 ## 📦 Installation
 
@@ -272,6 +280,12 @@ This project uses the following resources:
 <a name="türkçe"></a>
 
 # 📖 Türkçe Dokümantasyon
+
+## 📖 Hakkında
+
+**Yapay zeka ile manga panellerinin otomatik konum tahmini ve düzen oluşturma projesi.**
+
+Bu proje, LayoutGAN++ mimarisi kullanarak manga sayfaları için otomatik panel düzeni oluşturmayı hedeflemektedir. Derin öğrenme ve GAN teknolojisi ile farklı sayıda panel içeren manga sayfalarının optimal yerleşimini tahmin eder.
 
 ## 📦 Kurulum
 
